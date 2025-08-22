@@ -32,9 +32,8 @@ if uploaded_file:
         with st.spinner("Analyzing resume..."):
             try:
                 # Analyze resume
-                # analysis = resume_analyser(prompt)
+                analysis = resume_analyser(prompt)
                 st.success("Analysis complete!")
-                # st.write(analysis)
-                st.write(resume_text)
+                st.write(analysis)
             except Exception as e:
                 st.error(f"Analysis failed: {e}")
